@@ -1,16 +1,16 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: "com.jfrog.bintray"
+//apply plugin: "com.jfrog.bintray"
 
 version = "0.7.4"
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         minSdkVersion 18
-        targetSdkVersion 27
+        targetSdkVersion 28
         versionCode 14
         versionName version
     }
@@ -24,7 +24,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:support-annotations:27.1.1'
+    implementation 'com.android.support:support-annotations:28.0.0'
 
     testImplementation 'junit:junit:4.12'
 }
@@ -94,6 +94,7 @@ Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
 // https://github.com/bintray/gradle-bintray-plugin
+/*
 bintray {
     user = properties.getProperty("bintray.user")
     key = properties.getProperty("bintray.apikey")
@@ -115,4 +116,4 @@ bintray {
             }
         }
     }
-}
+}*/
